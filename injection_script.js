@@ -657,6 +657,7 @@ domainBypass("an1.com",()=>{
 	awaitElement("#waiting > a", a=>a.click())
 })
 //Insertion point for bypasses running before the DOM is loaded.
+hrefBypass(/hanime.tv\/inter\?r=/,()=>{safelyAssign(decodeURI(location.href.replace("inter?r=%2F", "").replace(/%2F/g, '/')));});
 domainBypass(/^((www\.)?((njiir|healthykk|linkasm|dxdrive|getwallpapers|sammobile|ydfile)\.com|(punchsubs|zedge)\.net|k2s\.cc|muhammadyoga\.me|u\.to|skiplink\.io|(uploadfree|freeupload)\.info|fstore\.biz))$/,()=>window.setInterval=f=>setInterval(f,1))
 hrefBypass(/thesimsresource\.com\/downloads\/details\/id\//,()=>window.setTimeout=f=>setTimeout(f,1))
 hrefBypass(/firefaucet\.win\/l\/|sfirmware\.com\/downloads-file\/|(apkily\.com\/getapp$)|androidtop\.net\/\?do=downloads\&id=/,()=>window.setInterval=f=>setInterval(f,1))
